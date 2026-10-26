@@ -153,6 +153,12 @@ available and applicable.
 This <ins>optional</ins> key’s value (type string) shall contain the name
 of the representor device for PCI VF (e.g. "eth3") if available and applicable.
 
+#### 3.1.4.7 “max-virtqueue-pairs”
+
+This <ins>optional</ins> key’s value (type uint16) shall contain the amount of
+maximum virtqueue pairs configured in the VDPA device, if available and
+applicable.
+
 ### 3.1.5 “vhost-user”
 
 This <ins>optional</ins> (<ins>required</ins> if “type” is set to “vhost-user”)
@@ -305,7 +311,8 @@ Plugin Device Information File.
     "vdpa": {
         “parent-device”: “vdpa3”,
         "driver": "vhost",
-        "path: "/dev/vdpa-vhost0"
+        "path": "/dev/vdpa-vhost0",
+        "max-virtqueue-pairs": 32
     }
 }
 ```
@@ -447,7 +454,8 @@ metadata:
                     "driver": "vhost",
                     "path": "/dev/vhost-vdpa0”,
                     "pci-address": "0000:02:01:6",
-                    "pf-pci-address": "0000:02:01:0"
+                    "pf-pci-address": "0000:02:01:0",
+                    "max-virtqueue-pairs": 32
                   }
               }</b>
          }
