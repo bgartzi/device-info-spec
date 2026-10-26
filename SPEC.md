@@ -159,6 +159,12 @@ This <ins>optional</ins> key’s value (type uint16) shall contain the amount of
 maximum virtqueue pairs configured in the VDPA device, if available and
 applicable.
 
+#### 3.1.4.8 “virtio-features”
+
+This <ins>optional</ins> key’s value (type uint64) shall contain a 64 long
+bitmap containing the virtio features that the VDPA device supports, if
+available and applicable.
+
 ### 3.1.5 “vhost-user”
 
 This <ins>optional</ins> (<ins>required</ins> if “type” is set to “vhost-user”)
@@ -312,7 +318,8 @@ Plugin Device Information File.
         “parent-device”: “vdpa3”,
         "driver": "vhost",
         "path": "/dev/vdpa-vhost0",
-        "max-virtqueue-pairs": 32
+        "max-virtqueue-pairs": 32,
+        "virtio-features": 13027704872
     }
 }
 ```
@@ -455,7 +462,8 @@ metadata:
                     "path": "/dev/vhost-vdpa0”,
                     "pci-address": "0000:02:01:6",
                     "pf-pci-address": "0000:02:01:0",
-                    "max-virtqueue-pairs": 32
+                    "max-virtqueue-pairs": 32,
+                    "virtio-features": 13027704872
                   }
               }</b>
          }
