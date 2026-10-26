@@ -3,7 +3,7 @@ Device Information Specification
 
 ***Network Plumbing Working Group***
 
-**Version 1.1.0**
+**Version 1.2.0**
 
 This document describes the de-facto standard for sharing device information
 between Device Plugins, NPWG Implementations and CNI plugins in Kubernetes.
@@ -302,7 +302,7 @@ Plugin Device Information File.
 ```
 {
     "type": "pci",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "pci": {
         "pci-address": "0000:01:02.2",
         “pf-pci-address”: "0000:01:02.0"
@@ -313,7 +313,7 @@ Plugin Device Information File.
 ```
 {
     "type": "vdpa",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "vdpa": {
         “parent-device”: “vdpa3”,
         "driver": "vhost",
@@ -327,7 +327,7 @@ Plugin Device Information File.
 ```
 {
     "type": "vhost-user",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "vhost-user": {
         "mode": "server",
         "path": "/var/run/vhost.sock"
@@ -409,7 +409,7 @@ metadata:
           <b>"device-info": 
              {
                "type": "pci",
-               "version": "1.1.0",
+               "version": "1.2.0",
                "pci":
                  { 
                    "pci-address": "0000:18:02.5"
@@ -423,7 +423,7 @@ metadata:
           <b>"device-info":
               {
                 "type": "pci",
-                "version": "1.1.0",
+                "version": "1.2.0",
                 "pci":
                   { 
                     "pci-address": "0000:18:0a.2"
@@ -439,7 +439,7 @@ metadata:
           <b>"device-info":
               {
                 "type": "vhost-user",
-                "version": "1.1.0",
+                "version": "1.2.0",
                 "vhost-user":
                   { 
                     "mode": "client",
@@ -454,7 +454,7 @@ metadata:
           <b>"device-info":
               {
                 "type": "vdpa”,
-                "version": "1.1.0",
+                "version": "1.2.0",
                 "vdpa":
                   { 
                     "parent-device": "vdpa2",
